@@ -1,0 +1,77 @@
+<div class="admin-container">
+  <h2>Admin Order Management</h2>
+  <!-- Search by Username -->
+  <div class="search-box">
+    <input [(ngModel)]="searchUsername" placeholder="Enter username" />
+    <button (click)="findOrders()">Find</button>
+    <button (click)="loadAllOrders()">Show All</button>
+  </div>
+  <!-- Orders Table -->
+  <table *ngIf="orders.length > 0">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th>Shipping</th>
+        <th>Total</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.username }}</td>
+        <td>
+          <input
+            [(ngModel)]="order.products[0].product"
+            placeholder="Product name"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="order.products[0].price"
+            placeholder="Price"
+            (ngModelChange)="formatPrice(order.products[0])"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="order.products[0].quantity"
+            type="number"
+            placeholder="Quantity"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="order.products[0].subtotal"
+            type="number"
+            placeholder="Subtotal"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="order.shipping"
+            type="number"
+            placeholder="Shipping"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="order.total"
+            type="number"
+            placeholder="Total"
+          />
+        </td>
+        <td>{{ order.date | date: "short" }}</td>
+        <td>
+          <button (click)="updateOrder(order)">Update</button>
+          <button (click)="deleteOrder(order._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="orders.length === 0">No orders found.</p>
+</div>
