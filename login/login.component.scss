@@ -1,0 +1,70 @@
+/* Full-Screen Login Container */  
+.login-container {  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh; /* Full height of the viewport */  
+  background-color: #2980b9; /* Attractive blue background */  
+  color: #ffffff; /* White text color */  
+  font-family: 'Roboto', sans-serif; /* Modern font */  
+  padding: 20px;  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */  
+}  
+
+/* Heading Styles */  
+h2 {  
+  margin-bottom: 20px; /* Space below heading */  
+  font-size: 2.5rem; /* Larger font size */  
+}  
+
+/* Form Styles */  
+form {  
+  background-color: #34495e; /* Darker background for form */  
+  padding: 30px;  
+  border-radius: 10px; /* Rounded corners */  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for form */  
+}  
+
+/* Input Styles */  
+input[type="text"],  
+input[type="password"] {  
+  width: 100%; /* Full width */  
+  padding: 10px;  
+  margin: 10px 0; /* Space between inputs */  
+  border: none;  
+  border-radius: 5px; /* Rounded corners */  
+  font-size: 1rem; /* Font size */  
+  color: #ffffff; /* Text color set to white for visibility */  
+  background-color: #1c2833; /* Darker background for inputs to increase contrast */  
+}  
+
+/* Button Styles */  
+button {  
+  background-color: #e74c3c; /* Attractive red button */  
+  color: #ffffff; /* White text */  
+  padding: 10px 20px;  
+  border: none;  
+  border-radius: 5px; /* Rounded corners */  
+  font-size: 1rem; /* Font size */  
+  cursor: pointer; /* Pointer cursor on hover */  
+  transition: background-color 0.3s ease; /* Smooth transition */  
+}  
+
+button:hover {  
+  background-color: #c0392b; /* Darker red on hover */  
+}  
+
+/* Link Styles */  
+p {  
+  margin-top: 20px; /* Space above paragraph */  
+}  
+
+a {  
+  color: #ffffff; /* White link color */  
+  text-decoration: underline; /* Underline links */  
+}  
+
+a:hover {  
+  color: #f1c40f; /* Yellow color on hover */  
+}  

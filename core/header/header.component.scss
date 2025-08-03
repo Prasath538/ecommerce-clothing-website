@@ -1,0 +1,85 @@
+/* General Header Styles */
+header {
+  background-color: #2c3e50; /* Dark blue background */
+  color: #ecf0f1; /* Light text color */
+  font-family: 'Arial', sans-serif; /* Font family */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+  width: 150px; /* Adjust logo size */
+  height: auto;
+}
+
+/* Navigation Styles */
+nav {
+  flex-grow: 1;
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#navbar li {
+  margin: 0 15px; /* Space between menu items */
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #ecf0f1; /* Light text color */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#navbar a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Close Button Styles */
+#close {
+  display: none; /* Hide close button by default */
+}
+
+/* Toggle Menu Styles */
+#toggle-menu {
+  display: flex;
+  align-items: center;
+}
+
+#toggle-menu a {
+  color: #ecf0f1; /* Light text color */
+  margin-right: 15px; /* Space between icons */
+}
+
+/* Counter Input Styles */
+.counter {
+  background-color: #34495e; /* Darker background for input */
+  color: #ecf0f1; /* Light text color */
+  border: none;
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #navbar {
+      flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  #navbar li {
+      margin: 10px 0; /* Space between items */
+  }
+
+  #close {
+      display: block; /* Show close button on small screens */
+  }
+}

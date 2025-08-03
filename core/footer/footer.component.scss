@@ -1,0 +1,64 @@
+/* Footer Styles */
+footer {
+  @apply bg-gradient-to-r from-gray-800 to-gray-900 text-white py-10 px-5; /* Gradient background */
+}
+
+footer .col {
+  @apply mb-6 flex flex-col; /* Flex column for better alignment */
+}
+
+footer h4 {
+  @apply text-lg font-semibold mb-4 text-primary; /* Use a primary color for headings */
+  @apply border-b-2 border-primary pb-2; /* Underline effect for headings */
+}
+
+footer p {
+  @apply text-sm mb-2 text-gray-300; /* Lighter text for paragraphs */
+}
+
+footer a {
+  @apply text-gray-400 hover:text-yellow-300 transition duration-300; /* Link styles with hover effect */
+}
+
+footer a:hover {
+  @apply text-white; /* Change text color on hover */
+}
+
+footer .f-icon {
+  @apply flex space-x-3 mt-2; /* Space between icons */
+}
+
+footer .f-icon i {
+  @apply text-2xl transition duration-300; /* Icon size and transition */
+}
+
+footer .f-icon i:hover {
+  @apply text-yellow-300 transform scale-110; /* Change icon color and scale on hover */
+}
+
+footer img {
+  @apply border border-primary rounded-md transition duration-300; /* Image styles with border and transition */
+}
+
+footer img:hover {
+  @apply transform scale-105; /* Scale effect on hover */
+}
+
+footer .text-center {
+  @apply mt-8; /* Margin for the copyright text */
+}
+
+footer .text-sm {
+  @apply text-gray-400; /* Lighter text for copyright */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  footer {
+    @apply text-center; /* Center text on smaller screens */
+  }
+
+  footer .col {
+    @apply mb-4; /* Adjust margin for columns */
+  }
+}

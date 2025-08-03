@@ -1,0 +1,46 @@
+/* Blog Section Styles */
+#blog {
+  @apply bg-white shadow-lg rounded-lg p-5;
+}
+
+.flex {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.flex:hover {
+  @apply transform scale-105;
+}
+
+h4 {
+  @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+p {
+  @apply text-gray-600 mb-4;
+}
+
+.text-txtBlog {
+  @apply text-gray-400;
+}
+
+/* Link Styles */
+a {
+  @apply text-inherit text-sm font-bold uppercase no-underline duration-300 relative hover:text-primary;
+  &::after {
+    @apply content-[''] w-9 h-px bg-black absolute top-1 left-0 duration-300;
+  }
+  &:hover::after {
+    @apply w-[50px] bg-primary;
+    @apply left-0; /* Center the underline */
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .flex {
+    @apply flex-col;
+  }
+  .md\:w-1\/2 {
+    @apply w-full;
+  }
+}

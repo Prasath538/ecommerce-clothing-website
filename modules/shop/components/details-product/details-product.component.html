@@ -1,0 +1,28 @@
+<!-- Product Details Section -->
+<section id="prodetails" class="section-p1 flex flex-col md:flex-row mt-3 lg:items-start sm:items-center">
+  <div class="md:w-2/5 sm:w-full md:mr-12 sm:mr-0">
+    <img src="{{imgSrc}}" width="100%" #mainImg alt="Product Image">
+    <div class="flex justify-between mt-1">
+      <div class="basis-1/4 cursor-pointer" *ngFor="let proImg of proImgs; let i = index">
+        <img src="{{proImg.img}}" width="100%" alt="Thumbnail Image" (click)="chooseImg(proImg.img)">
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 md:w-1/2 sm:w-full">
+    <h6 class="font-bold">Home / T-Shirt</h6>
+    <h4 class="pt-8 pb-4 font-bold">{{titleProd}}</h4>
+    <h2 class="text-2xl">{{priceProd}}</h2>
+    <select class="block text-sm py-2 px-3 mb-2 border focus:outline-primary">
+      <option>Select Size</option>
+      <option>XL</option>
+      <option>XXL</option>
+      <option>Small</option>
+      <option>Large</option>
+    </select>
+    <input (change)="valChange($event)" type="number" value="{{valInput}}"
+      class="w-12 h-12 border pl-3 mr-3 text-base focus:outline-primary">
+    <button class="normal text-white bg-primary" (click)="addCart($event)">Add To Cart</button>
+    <h4 class="font-bold pt-7 pb-4">Product Details</h4>
+    <p class="leading-6">Crafted from premium, breathable fabric, this apparel piece offers exceptional comfort and durability for everyday wear. Designed with a modern fit and reinforced stitching, it provides both style and long-lasting quality. Whether for casual outings or special occasions, this garment comes in a variety of colors to suit your personal taste and wardrobe needs.</p>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+/* Cart Table Styles */
+#cart-table {
+  @apply bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+#cart-table table {
+  @apply w-full border-collapse;
+}
+
+#cart-table thead {
+  @apply bg-slate-100 border-b border-formBorder;
+}
+
+#cart-table th {
+  @apply uppercase text-sm py-4 font-bold text-gray-700;
+}
+
+#cart-table tbody {
+  @apply divide-y divide-gray-200;
+}
+
+#cart-table tbody tr {
+  @apply transition duration-300 ease-in-out hover:bg-gray-50;
+}
+
+#cart-table tbody tr:hover {
+  @apply bg-gray-100;
+}
+
+#cart-table tbody td {
+  @apply py-4 text-sm text-gray-600 text-center;
+}
+
+#cart-table tbody td img {
+  @apply w-20 h-20 object-cover rounded-md mx-auto;
+}
+
+#cart-table tbody td:nth-child(5) input {
+  @apply w-16 py-2 pr-1 pl-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+}
+
+#cart-table tbody td i {
+  @apply text-red-500 hover:text-red-700 transition duration-300 cursor-pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #cart-table {
+    @apply overflow-x-scroll;
+  }
+}
